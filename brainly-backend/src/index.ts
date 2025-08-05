@@ -1,12 +1,15 @@
 import express from 'express';
 import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
+
+dotenv.config();
 import bcrypt from 'bcrypt';
 import { User, Content, Link, Tags } from './db.js';
 import { authMiddleware, type CustomRequest } from './middleware.js';
 import { random } from './utils.js';
 // import { v4 as uuidv4 } from 'uuid';
-const JWT_SECRET = 'shreyansh';
-const PORT = 3000;
+const JWT_SECRET = process.env.JWT_SECRET || 'shreyansh';
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 app.use(express.json());

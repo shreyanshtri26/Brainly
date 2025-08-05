@@ -1,7 +1,10 @@
 import type { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
 
-const JWT_SECRET = 'shreyansh';
+dotenv.config();
+
+const JWT_SECRET = process.env.JWT_SECRET || 'shreyansh';
 
 // Define a custom request type that includes the userId property
 export interface CustomRequest extends Request {
