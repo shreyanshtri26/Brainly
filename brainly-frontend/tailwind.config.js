@@ -8,11 +8,17 @@ export default {
     extend: {
       colors: {
         purple: {
-          300: "#e0e7fe",
-          500: "#3e38a7",
-          600: "#5046e4",
-        }
-      }
+          200: "#d0bcedff",
+          500: "#b375e1ff",
+          600: "#871fdbff",
+        },
+        gray: {
+          100: "#e5e7eb",
+          200: "#9ca3af",
+          600: "#424447ff",
+        },
+      },
+      backgroundOpacity: ['active'],
     },
   },
   plugins: [],

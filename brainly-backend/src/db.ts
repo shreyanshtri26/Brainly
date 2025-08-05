@@ -13,7 +13,7 @@ const UserSchema=new mongoose.Schema({
 })
 
 
-const contentTypes = ['image', 'video', 'article', 'audio'];
+const contentTypes = ['image', 'youtube', 'twitter', 'article', 'audio'];
 const ContentSchema =new mongoose.Schema({
     link:String,
     type:{type:String,enum:contentTypes,required:true},
